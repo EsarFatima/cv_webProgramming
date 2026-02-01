@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Professional CV</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome for Icons (Optional but recommended) -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#experience" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
     <!-- Header Section -->
     <header class="main-header">
         <div class="container">
@@ -46,7 +53,6 @@
                     <h3>BSCS</h3>
                     <h4>National University of Computer and Emerging Sciences</h4>
                     <p class="date">2023 - 2027</p>
-                    <p> Dummy </p>
                 </div>
               
             </div>
@@ -116,19 +122,11 @@
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> esaarfatima62@gmail.com</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:esaarfatima62@gmail.com">esaarfatima62@gmail.com</a></p>
                 <p><i class="fas fa-phone"></i> +92 321 8902886 </p>
-                <p><i class="fab fa-linkedin"></i> https://www.linkedin.com/in/esar-fatima/</p>
-                <p><i class="fab fa-github"></i> https://github.com/EsarFatima</p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/esar-fatima/" target="_blank">linkedin.com/in/esar-fatima</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/EsarFatima" target="_blank">github.com/EsarFatima</a></p>
             </div>
-
-            
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
         </div>
     </section>
 
@@ -137,7 +135,7 @@
         <div class="container">
             <p>&copy; 2026 Esar Fatima. All Rights Reserved.</p>
            
-            <a href="#" class="btn btn-small" download>Download CV</a>
+            <a href="cv.pdf" class="btn btn-small" download>Download CV</a>
         </div>
     </footer>
 
