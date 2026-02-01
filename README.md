@@ -3,9 +3,9 @@
 This is a responsive CV website built as part of the Web Programming course assignment.
 
 ## Project Information
-- **Name:** [Your Name]
-- **Roll No:** [Your Roll No]
-- **Date:** February 2026
+- **Name:** Esar Fatima
+- **Roll No:** 23L-0888
+
 
 ## Technologies Used
 - HTML5
