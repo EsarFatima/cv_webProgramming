@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -6,7 +6,6 @@
     --bg-color: #f4f4f4;
     --card-bg: #fff;
     --header-bg: #fff;
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 [data-theme="dark"] {
@@ -47,7 +46,7 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Sections */
+
 .section {
     padding: 3rem 0;
 }
@@ -70,7 +69,176 @@ body {
     margin: 10px auto 0;
 }
 
-/* Ensure sections have some spacing */
+
 p {
     margin-bottom: 1rem;
+}
+
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.08);
+    padding: 2rem 1.5rem;
+    min-width: 250px;
+    max-width: 350px;
+    flex: 1 1 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 0.8s ease;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(44,62,80,0.15);
+}
+
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+.skills-list li {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    animation: fadeIn 0.7s;
+}
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    margin-left: 1rem;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+.timeline-item {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    padding: 1.5rem 2rem;
+    margin-left: 2rem;
+    position: relative;
+    animation: fadeInRight 0.8s;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.1rem;
+    top: 1.5rem;
+    width: 18px;
+    height: 18px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 4px rgba(52,152,219,0.15);
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: var(--card-bg);
+    color: var(--text-color);
+    transition: border 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1.5px solid var(--secondary-color);
+    outline: none;
+}
+.btn {
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    transition: background 0.2s, transform 0.2s;
+    animation: fadeIn 0.7s;
+}
+.btn:hover {
+    background: #217dbb;
+    transform: scale(1.04);
+}
+.btn-small {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.95rem;
+}
+
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+@media (max-width: 900px) {
+    .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-item {
+        padding: 1.2rem 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 0 8px;
+    }
+    .section {
+        padding: 1.5rem 0;
+    }
+    .timeline-item {
+        margin-left: 1rem;
+    }
+    .timeline::before {
+        left: -0.5rem;
+    }
 }
