@@ -14,7 +14,8 @@ This is a responsive CV website built as part of the Web Programming course assi
 - Responsive Design
 
 ## Live Link
-[Link to Vercel Deployment will go here]
+Link to vercel deployment:https://cv-web-programming.vercel.app
+Link to github repo:https://github.com/EsarFatima/cv_webProgramming
 
 ## Features
 - Responsive layout (Mobile & Desktop)
